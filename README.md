@@ -12,20 +12,21 @@ Title: Celestial Combat  Game
 
 *Overview*
 
-Players navigate a snake which eats different types of spaceships along the space area. The game featured a variety of power-ups adding excitement to the journey. With limited graphics and controls, it showcased the charm of early mobile gaming. Celestial combat is inspired from the Nokia 3310 Snake game. Its enduring popularity led to nostalgic remakes and tributes in the years that followed.
+Players navigated a spaceship, battling waves of alien enemies across various levels. The game featured a variety of power-ups and challenging bosses, adding excitement to the journey. With limited graphics and controls, it showcased the charm of early mobile gaming. Celestial combat is inspired from the Nokia 3310 Space Impact. It became a defining title for the Nokia 3310, contributing to the phone's legendary status in mobile gaming history. Its enduring popularity led to nostalgic remakes and tributes in the years that followed.
 
 *Goals*
 
-It will crash the dots came across it's path.
-A random space of dots will come until the end the game will be over. And the game will be over if the snake hit itself or crash with the borders.
+It shouldn’t hit any obstacles incoming from the enemy or atmosphere.
+A certain number of firing enemies will come . If the player survives until the end the game will be over.
 
 *Controls*
 
-Left, right, up and down movement with according keyboard movements.
+Left, right, up and down movement. And a button will generate shooting towards the enemy obstacles.
+
 
 *Developing goals*
 
-The primary development goal is to implement a functional shooting game using a programming language of C and relevant data structure. Key features include user input handling, random enemy obstacle generation, player spaceship movement mechanics, collision detection, and scoring system.
+The primary development goal is to implement a functional shooting game using a programming language of C++ and relevant data structure. Key features include user input handling, random enemy obstacle generation, player spaceship movement mechanics, collision detection, and scoring system.
 
 
 
