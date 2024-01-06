@@ -1,4 +1,4 @@
-# Celestial-Combat
+# Celestial-Combat(Special Version)
 <h3>Course Name: Project Work 1</h3> 
 Course Code: CSE 150 
 <h4>Team: DYNAMIC_DRILLERS </h4>
