@@ -1,65 +1,46 @@
-# Celestial-Combat(Special Version)
-<h3>Course Name: Project Work 1</h3> 
-Course Code: CSE 150 
-<h4>Team: DYNAMIC_DRILLERS </h4>
+# 🚀 Celestial Combat (Special Version)
 
-Title: Celestial Combat  Game
+### 📚 Course Name: Project Work 1
+### 🆔 Course Code: CSE 150
+### 👥 Team: DYNAMIC_DRILLERS
+### 🕹️ Title: Celestial Combat Game
 
+**📅 Date:** 01.12.2023
 
-01.12.2023
+## 🌟 Overview
 
+Celestial Combat invites players to navigate a spaceship, battling waves of alien enemies across various levels. Inspired by the legendary Nokia 3310 Space Impact, this game features a variety of power-ups and challenging bosses, adding excitement to the journey. With limited graphics and controls, it showcases the charm of early mobile gaming and contributes to the phone's legendary status in mobile gaming history. Its enduring popularity has led to nostalgic remakes and tributes over the years.
 
+## 🎯 Goals
 
-*Overview*
+- **🛡️ Survival:** Avoid obstacles from enemies and the atmosphere.
+- **🔫 Combat:** Engage and destroy a certain number of firing enemies.
+- **🏆 Victory:** Survive until the end to complete the game.
 
-Players navigated a spaceship, battling waves of alien enemies across various levels. The game featured a variety of power-ups and challenging bosses, adding excitement to the journey. With limited graphics and controls, it showcased the charm of early mobile gaming. Celestial combat is inspired from the Nokia 3310 Space Impact. It became a defining title for the Nokia 3310, contributing to the phone's legendary status in mobile gaming history. Its enduring popularity led to nostalgic remakes and tributes in the years that followed.
+## 🎮 Controls
 
-*Goals*
+- **⬅️ Movement:** Navigate the spaceship using Left, Right, Up, and Down movements.
+- **🚀 Shooting:** Use a dedicated button to fire at enemy obstacles.
 
-It shouldn’t hit any obstacles incoming from the enemy or atmosphere.
-A certain number of firing enemies will come . If the player survives until the end the game will be over.
+## 🛠️ Developing Goals
 
-*Controls*
+The primary development goal is to implement a functional shooting game using C++ and relevant data structures. Key features include:
 
-Left, right, up and down movement. And a button will generate shooting towards the enemy obstacles.
+- 🎛️ User input handling
+- 🎲 Random enemy obstacle generation
+- 🚀 Player spaceship movement mechanics
+- 💥 Collision detection
+- 🏅 Scoring system
 
+## 📈 Learning Outcomes
 
-*Developing goals*
+- Enhanced team collaboration and communication skills.
+- Development of problem-solving skills through game development.
+- Implementation of basic algorithms for collision detection and score tracking.
+- Gained experience in user input handling and game mechanics.
 
-The primary development goal is to implement a functional shooting game using a programming language of C++ and relevant data structure. Key features include user input handling, random enemy obstacle generation, player spaceship movement mechanics, collision detection, and scoring system.
+---
 
+**📜 Submitted by:**
 
-
-*Learning Outcomes*
-
-Enhanced Team Collaboration and Communication Skills.
-Developing problem-solving skills through game development.
-Implementing basic algorithms for collision detection and score tracking.
-Gaining experience in user input handling and game mechanics.
-
-***Submitted by***
-
-
-
-**A.B.M.Mostakim Niloy**
-
-Registration: 2021331088
-
-
-**Abdullah Al Mamun** 
-
-Registration: 2021331086
-
-
-**Md Iftekher Haider Rakib** 
-
-Registration: 2021331092
-
-
-
-
-<h2 align="center">▶️DYNAMIC_DRILLERS🙂
-</h2>
-
-<h3 align="center">SUST CSE 21
-</h3>
+**A.B.M. Mostakim Niloy**
