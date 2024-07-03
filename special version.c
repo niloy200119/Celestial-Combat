@@ -1,6 +1,23 @@
 #include<stdio.h>
 #include<time.h>
+#include<conio.h>
 #include<windows.h>
+#define MAX_SCORES 5
+#define MAX_NAME_LENGTH 20
+
+typedef struct {
+    char name[MAX_NAME_LENGTH];
+    int score;
+} ScoreEntry;
+
+ScoreEntry highScores[MAX_SCORES];
+
+// Function prototypes
+void saveHighScores();
+void loadHighScores();
+void updateHighScores(int score, const char *name);
+void printHighScores();
+
 
 int board[26][76], planeMove, bombY, bombX, bombOn = 0;
 int blockOn = 0, blockY, blockX, score = 0;
@@ -66,19 +83,20 @@ void Plane() {
 
     board[planeMove + 4][3] = 1;
 
-    setCellValue(planeMove, 3, '*');
+     setCellValue(planeMove, 3, '▲');
 
-    setCellValue(planeMove + 1, 3, '*');
-    setCellValue(planeMove + 1, 4, '*');
+    setCellValue(planeMove + 1, 3, '▲');
+    setCellValue(planeMove + 1, 4, '▲');
 
-    setCellValue(planeMove + 2, 3, '*');
-    setCellValue(planeMove + 2, 4, '*');
-    setCellValue(planeMove + 2, 5, '*');
+    setCellValue(planeMove + 2, 3, '▲');
+    setCellValue(planeMove + 2, 4, '▲');
+    setCellValue(planeMove + 2, 5, '▲');
 
-    setCellValue(planeMove + 3, 3, '*');
-    setCellValue(planeMove + 3, 4, '*');
+    setCellValue(planeMove + 3, 3, '▲');
+    setCellValue(planeMove + 3, 4, '▲');
 
-    setCellValue(planeMove + 4, 3, '*');
+    setCellValue(planeMove + 4, 3, '▲');
+
 
 
 }
@@ -200,6 +218,7 @@ void set() {
 
 void gameOver() {
     cursor(28, 0);
+    printf("DYNAMIC_DRILLERS\n");
     printf("Game Over! Your Score: %d\n", score);
 
 }
@@ -210,7 +229,8 @@ void playBoomSound() {
     Beep(1000, 500);
 }
 
-void main() {
+int main() {
+    loadHighScores();
     clscreen();
     printBoard();
     int i, j, k;
@@ -303,8 +323,75 @@ void main() {
         Score();
         Sleep(30);
     }
+    char playername[MAX_NAME_LENGTH];
+    printf("Enter your name : ");
+    scanf("%s",playername);
+    updateHighScores(score, playername); // Update with the actual score and player name
+    saveHighScores();
+    printHighScores();
+
     getchar();
     return 0;
+
+}
+void saveHighScores() {
+    FILE *file = fopen("highscores.txt", "w");
+    if (file == NULL) {
+        printf("Error opening file for writing.\n");
+        return;
+    }
+
+    for (int i = 0; i < MAX_SCORES; i++) {
+        fprintf(file, "%s %d\n", highScores[i].name, highScores[i].score);
+    }
+
+    fclose(file);
+}
+
+void loadHighScores() {
+    FILE *file = fopen("highscores.txt", "r");
+    if (file == NULL) {
+        printf("Error opening file for reading. Initializing high scores.\n");
+        // Initialize high scores with default values
+        for (int i = 0; i < MAX_SCORES; i++) {
+            strcpy(highScores[i].name, "Unknown");
+            highScores[i].score = 0;
+        }
+        return;
+    }
+
+    for (int i = 0; i < MAX_SCORES; i++) {
+        if (fscanf(file, "%s %d", highScores[i].name, &highScores[i].score) != 2) {
+            printf("Error reading high scores from file.\n");
+            break;
+        }
+    }
+
+    fclose(file);
+}
+
+void updateHighScores(int score, const char *name) {
+    int i, j;
+    for (i = 0; i < MAX_SCORES; i++) {
+        if (score > highScores[i].score) {
+            // Shift lower scores down
+            for (j = MAX_SCORES - 1; j > i; j--) {
+                strcpy(highScores[j].name, highScores[j - 1].name);
+                highScores[j].score = highScores[j - 1].score;
+            }
+            // Insert new score
+            strcpy(highScores[i].name, name);
+            highScores[i].score = score;
+            break;
+        }
+    }
+}
+
+void printHighScores() {
+    printf("\nHigh Scores:\n");
+    for (int i = 0; i < MAX_SCORES; i++) {
+        printf("%d. %s - %d\n", i + 1, highScores[i].name, highScores[i].score);
+    }
 }
 
 
@@ -329,3 +416,11 @@ void clscreen(){
 void cursor(int row, int col){
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), (COORD){col, row});
 }
+
+
+
+
+
+//Thank_u_everyone!
+//DYNAMIC_DRILLERS
+//SUST CSE 21
